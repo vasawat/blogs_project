@@ -9,7 +9,9 @@ export const BlogProvider = ({ children }) => {
   const [image_url, setImage_url] = useState("");
   const fetchData = async () => {
     try {
-      const response = await fetch("/api");
+      const response = await fetch(
+        "https://blogs-project-backend.onrender.com/api"
+      );
       const data = await response.json();
       setBackendData(data);
     } catch (error) {
@@ -20,19 +22,22 @@ export const BlogProvider = ({ children }) => {
   let addBlog = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/addBlog", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify({
-          title: title,
-          content: content,
-          author: author,
-          image_url: image_url,
-        }),
-      });
+      const response = await fetch(
+        "https://blogs-project-backend.onrender.com/api/addBlog",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify({
+            title: title,
+            content: content,
+            author: author,
+            image_url: image_url,
+          }),
+        }
+      );
       const data = await response.json();
       console.log("Add Blog response:", data);
     } catch (err) {
@@ -43,7 +48,7 @@ export const BlogProvider = ({ children }) => {
   // eslint-disable-next-line
   const deleteBlog = async (id) => {
     try {
-      await fetch("/api/deleteBlog", {
+      await fetch("https://blogs-project-backend.onrender.com/api/deleteBlog", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -66,7 +71,7 @@ export const BlogProvider = ({ children }) => {
   const editBlog = async (event, id) => {
     event.preventDefault();
     try {
-      await fetch("/api/editBlog", {
+      await fetch("https://blogs-project-backend.onrender.com/api/editBlog", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
