@@ -15,7 +15,7 @@
 .blog-card {
     width: 98.7%;
     margin-bottom: 2rem;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+
     transition: box-shadow 0.3s ease-in-out;
 }
 .blog-card:hover {
@@ -80,7 +80,6 @@
     width: 100%;
     padding: 12px 20px;
     font-size: 16px;
-    /* box-sizing: border-box; */
     border: none;
     border-bottom:2.2px solid #503629;
     background-color: #EFEFEF;
