@@ -15,7 +15,6 @@
 .blog-card {
     width: 98.7%;
     margin-bottom: 2rem;
-
     transition: box-shadow 0.3s ease-in-out;
 }
 .blog-card:hover {
@@ -60,6 +59,7 @@
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    transition: all .55s;
 }
 .button-blog:hover {
     background-color:#7d5744;

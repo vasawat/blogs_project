@@ -17,7 +17,8 @@ a {
 }
 .linkHeader {
     text-decoration: none;
-    padding: 20px;
+    padding: 10px;
+    margin: 10px;
 }
 .topRightHeader {
     position: absolute;
@@ -25,4 +26,9 @@ a {
 }
 .topRightHeader_item {
     font-size: 15px;
+    border-bottom: 2px solid transparent;
+    transition: all .55s;
+}
+.topRightHeader_item:hover {
+    border-bottom: 2px solid #503629;
 }
